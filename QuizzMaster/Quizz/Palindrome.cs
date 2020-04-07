@@ -6,6 +6,15 @@ namespace QuizzMaster.Quizz
   {
     public static bool IsPalindrome(string first, string second)
     { 
+      var str1 = first.ToLower().ToCharArray().ToList();
+      var str2 = second.ToLower().ToCharArray().ToList();
+      
+      if (str1.Count != str2.Count)
+      return false;
+
+      return str1.ToString() == str2.ToString();
+
+      /*
       first = first.ToLower();
       second = second.ToLower();
 
@@ -14,7 +23,7 @@ namespace QuizzMaster.Quizz
 
 
       if (str1.Count != str2.Count)
-      return false;
+        return false;
 
       var palindrome = true;
 
@@ -28,6 +37,7 @@ namespace QuizzMaster.Quizz
       });
 
       return palindrome;
+      */
     }
   }
 }

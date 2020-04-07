@@ -25,6 +25,20 @@ namespace QuizzMasterTest.Quizz
     }
 
     [Test]
+    public void SameLetters_DifferentCase_ShouldReturn_True()
+    {
+      //Arrange
+      var first = "mine";
+      var last = "nemi";
+
+      //Process
+      var result = Palindrome.IsPalindrome(first, last);
+
+      //Assert
+      Assert.AreEqual(true, result);
+    }
+
+    [Test]
     public void SameWord_DifferentCase_ShouldReturn_True()
     {
       //Arrange
